@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
+import SingleUser from './SingleUser';
 
 function Users(props) {
   return (
@@ -15,6 +16,16 @@ function Users(props) {
           <Link to='/users/2'>second</Link>
         </li>
       </ul>
+      <hr />
+
+      <Switch>
+        <Route path={'/users/1'}>
+          <SingleUser />
+        </Route>
+        <Route path={'/users/2'}>
+          <p>second user</p>
+        </Route>
+      </Switch>
     </div>
   );
 }

@@ -11,12 +11,6 @@ function App() {
     <div className='App container'>
       <Nav />
       <Switch>
-        <Route path={'/users/1'}>
-          <p>FIrst user</p>
-        </Route>
-        <Route path={'/users/2'}>
-          <p>second user</p>
-        </Route>
         <Route path={'/users'}>
           <Users />
         </Route>
