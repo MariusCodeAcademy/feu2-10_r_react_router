@@ -6,6 +6,7 @@ import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
 import Users from './components/pages/Users';
 import SingleUser from './components/pages/SingleUser';
+import NotFound from './components/pages/NotFound';
 
 export const usersData = [
   {
@@ -46,8 +47,12 @@ function App() {
         <Route path={'/kontaktai'}>
           <Contact />
         </Route>
-        <Route path={'/'}>
+        <Route path={'/'} exact>
           <Home />
+        </Route>
+        {/* 404 puslapis kuris neegsistuoja */}
+        <Route path={'*'}>
+          <NotFound />
         </Route>
       </Switch>
     </div>
