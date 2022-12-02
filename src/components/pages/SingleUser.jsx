@@ -1,18 +1,24 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+
+import { usersData } from '../../App';
 
 function SingleUser(props) {
   // gauti id to userio kurio informacija norim atvaizuot
-  const params = useParams();
-  console.log('params ===', params);
+  const { userId } = useParams();
+  console.log('userId ===', userId);
+  console.log('usersData ===', usersData);
+
+  const [currentUser, setCurrentUser] = useState(
+    usersData.find((uObj) => uObj.id === userId)
+  );
 
   return (
     <div>
       <div className='card'>
-        <h1>James Band</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit,
-          ad. Vitae sapiente velit voluptas ad.
-        </p>
+        <h1>{currentUser.name}</h1>
+        {/* age */}
+        {/* Town */}
       </div>
     </div>
   );

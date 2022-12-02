@@ -9,19 +9,19 @@ import SingleUser from './components/pages/SingleUser';
 
 export const usersData = [
   {
-    id: 1,
+    id: '1',
     name: 'James Band',
     town: 'London',
     age: 99,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Jane Dow',
     town: 'Liverpool',
     age: 33,
   },
   {
-    id: 3,
+    id: '3',
     name: 'Serbentautas',
     town: 'Kaunas',
     age: 27,
