@@ -18,14 +18,15 @@ function Users(props) {
       </ul>
       <hr />
 
-      <Switch>
+      {/* uzkrauti komponentu tame paciame puslapyje */}
+      {/* <Switch>
         <Route path={'/users/1'}>
           <SingleUser />
         </Route>
         <Route path={'/users/2'}>
           <p>second user</p>
         </Route>
-      </Switch>
+      </Switch> */}
     </div>
   );
 }
