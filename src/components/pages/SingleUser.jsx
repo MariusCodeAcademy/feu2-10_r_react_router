@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 import { usersData } from '../../App';
 
 function SingleUser(props) {
+  const history = useHistory();
   // gauti id to userio kurio informacija norim atvaizuot
   const { userId } = useParams();
   console.log('userId ===', userId);
@@ -12,6 +13,12 @@ function SingleUser(props) {
   const [currentUser, setCurrentUser] = useState(
     usersData.find((uObj) => uObj.id === userId)
   );
+
+  function goBack() {
+    // programine navigacija
+    // window.location.href = '/users' vanila js
+    history.push('/users');
+  }
 
   return (
     <div>
@@ -22,6 +29,7 @@ function SingleUser(props) {
           {currentUser.name} lives in {currentUser.town}
         </p>
       </div>
+      <button onClick={goBack}> Go Back To Users</button>
     </div>
   );
 }
