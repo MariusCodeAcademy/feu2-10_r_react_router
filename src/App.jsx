@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Nav from './components/nav/Nav';
 import About from './components/pages/About';
@@ -9,16 +9,17 @@ function App() {
   return (
     <div className='App container'>
       <Nav />
-
-      <Route path={'/apie'}>
-        <About />
-      </Route>
-      <Route path={'/kontaktai'}>
-        <Contact />
-      </Route>
-      {/* <Route path={'/'}>
-        <Home />
-      </Route> */}
+      <Switch>
+        <Route path={'/apie'}>
+          <About />
+        </Route>
+        <Route path={'/kontaktai'}>
+          <Contact />
+        </Route>
+        <Route path={'/'}>
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
