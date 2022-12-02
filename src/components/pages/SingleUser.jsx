@@ -1,4 +1,10 @@
+import { useParams } from 'react-router-dom';
+
 function SingleUser(props) {
+  // gauti id to userio kurio informacija norim atvaizuot
+  const params = useParams();
+  console.log('params ===', params);
+
   return (
     <div>
       <div className='card'>

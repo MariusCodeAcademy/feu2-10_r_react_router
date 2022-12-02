@@ -33,6 +33,7 @@ function App() {
     <div className='App container'>
       <Nav />
       <Switch>
+        {/* :userId - dinamine kelio dalis. dynamic parameter  */}
         <Route path={'/users/:userId'}>
           <SingleUser />
         </Route>
