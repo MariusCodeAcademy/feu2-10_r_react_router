@@ -4,12 +4,22 @@ import Nav from './components/nav/Nav';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import Home from './components/pages/Home';
+import Users from './components/pages/Users';
 
 function App() {
   return (
     <div className='App container'>
       <Nav />
       <Switch>
+        <Route path={'/users/1'}>
+          <p>FIrst user</p>
+        </Route>
+        <Route path={'/users/2'}>
+          <p>second user</p>
+        </Route>
+        <Route path={'/users'}>
+          <Users />
+        </Route>
         <Route path={'/apie'}>
           <About />
         </Route>
