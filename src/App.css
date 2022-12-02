@@ -7,3 +7,14 @@ h1 {
   letter-spacing: 3px;
   font-size: 1.5rem;
 }
+
+nav {
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav a {
+  padding: 1em 2em;
+  background-color: rgb(202, 202, 202);
+}

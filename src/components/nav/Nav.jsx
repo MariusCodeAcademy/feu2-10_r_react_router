@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 function Nav(props) {
   return (
     <nav>
-      <a href='/index.html'>Home page</a>
-      <a href='/about.html'>About page</a>
-      <a href='/contact.html'>Contact page</a>
+      <Link to='/'>Home page</Link>
+      <Link to='/apie'>About page</Link>
+      <Link to='/kontaktai'>Contact page</Link>
     </nav>
   );
 }
