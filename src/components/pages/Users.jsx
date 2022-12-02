@@ -1,5 +1,5 @@
 import { Link, Route, Switch } from 'react-router-dom';
-import SingleUser from './SingleUser';
+import { usersData } from './../../App';
 
 function Users(props) {
   return (
@@ -9,12 +9,11 @@ function Users(props) {
       <button>Load more</button>
 
       <ul>
-        <li>
-          <Link to='/users/1'>first</Link>
-        </li>
-        <li>
-          <Link to='/users/2'>second</Link>
-        </li>
+        {usersData.map((uObj) => (
+          <li key={uObj.id}>
+            <Link to={`/users/${uObj.id}`}>{uObj.name}</Link>
+          </li>
+        ))}
       </ul>
       <hr />
 

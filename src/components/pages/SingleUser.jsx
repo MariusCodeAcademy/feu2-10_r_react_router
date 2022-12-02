@@ -17,8 +17,10 @@ function SingleUser(props) {
     <div>
       <div className='card'>
         <h1>{currentUser.name}</h1>
-        {/* age */}
-        {/* Town */}
+        <h4>age is {currentUser.age}</h4>
+        <p>
+          {currentUser.name} lives in {currentUser.town}
+        </p>
       </div>
     </div>
   );
