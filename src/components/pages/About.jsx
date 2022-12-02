@@ -1,4 +1,4 @@
 function About(props) {
-  return <div>About</div>;
+  return <div>About page</div>;
 }
 export default About;

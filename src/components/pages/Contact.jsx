@@ -1,4 +1,4 @@
 function Contact(props) {
-  return <div>Contact</div>;
+  return <div>Contact page</div>;
 }
 export default Contact;
